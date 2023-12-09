@@ -12,6 +12,7 @@ import CurrencyDropdown from "../currency-dropdown";
 
 function Navbar() {
   const navigate = useNavigate();
+  console.log("TEST")
 
   const isAdmin = localStorage.getItem("isAdmin") === "true";
 
@@ -57,31 +58,33 @@ function Navbar() {
   const closeDropdown = () => {
     setIsShportaDropdown(false);
   };
-  useEffect(() => {
-    const handleScroll = () => {
+  let scrollTimeout;
+
+  const handleScroll = () => {
+    clearTimeout(scrollTimeout);
+  
+    scrollTimeout = setTimeout(() => {
       const currentScrollY = window.scrollY;
-
+  
       // Hide the navbar when scrolling down
-
-      if (currentScrollY > 60) {
-        // Apply a margin of -40px when the condition is met
+      if (window.scrollY > 60) {
         setIsNavSticky(true);
       } else {
-        // Remove the margin when the condition is not met
         setIsNavSticky(false);
       }
-
+  
       // Reveal the navbar when scrolling all the way up
-
       setPrevScrollY(currentScrollY);
-    };
-
+    }, 100); // Adjust the debounce delay as needed
+  };
+  
+  useEffect(() => {
     window.addEventListener("scroll", handleScroll);
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [prevScrollY]);
+  }, []);
+  
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -130,8 +133,9 @@ function Navbar() {
           </ul>
         </div>
       )}
-      <nav className={`navigation  ${isNavSticky ? "sticky " : ""}`}>
-        <div className='navigation-items'>
+ <nav
+        className={`navigation  ${isNavSticky ? "sticky " : ""}`}
+      >        <div className='navigation-items'>
           <>
             <button
               className='hamburger '

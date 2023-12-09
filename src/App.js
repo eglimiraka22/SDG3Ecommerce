@@ -44,7 +44,6 @@ function App() {
       },
     );
   };
-
   // Use useEffect to update isAdmin state on component mount
   useEffect(() => {
     setIsAdmin(localStorage.getItem("isAdmin") === "true");

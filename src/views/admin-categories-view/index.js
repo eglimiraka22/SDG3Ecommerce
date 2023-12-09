@@ -22,7 +22,6 @@ const AdminCategoriesView = () => {
   const [newCategoryTitle, setNewCategoryTitle] = useState("");
   const [selectedCategoryId, setSelectedCategoryId] = useState(null);
 
-  console.log(newCategoryTitle);
 
   const handleTitleChange = (e) => {
     setNewCategoryTitle(e.target.value);

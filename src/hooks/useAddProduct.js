@@ -38,7 +38,6 @@ const useAddProduct = () => {
       };
 
       if (existingProductId) {
-        console.log("Existing", existingProductId);
         // Editing an existing product
         await client.patch(existingProductId).set(updatedProduct).commit();
       } else {

@@ -71,7 +71,6 @@ const useGetOrders = (pageSize, page) => {
     // Clean up the interval when the component unmounts
   }, [pageSize, page, orderStatus]);
 
-  console.log(totalOrderCount, orders);
 
   return {
     totalOrderCount,

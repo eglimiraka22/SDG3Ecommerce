@@ -92,7 +92,6 @@ const useAdminCategories = () => {
 
         // Create the order using client.create
         await client.create(CategoryDocument).then((data) => {
-          console.log(data);
           setCategories((prevCategories) => [
             ...prevCategories,
             { _id: data._id, name: data.name },
