@@ -1,0 +1,49 @@
+@import '~font-awesome/css/font-awesome.css';
+
+.text-header {
+	width: fit-content;
+	height: fit-content;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+	margin: 1rem auto;
+	position: relative;
+}
+.text-header:before {
+	content: "";
+	position: absolute;
+	inset: 90% auto; display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 1px;
+	width: 10rem;
+	
+	border-bottom: 3px solid var(--secondary-color);
+  }
+
+.text-header h1 {
+	font-size: 1.6rem;
+	font-weight: 600;
+	color: var(--primary-color);
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 0.1rem;
+	line-height: 1.5;
+}
+
+@media screen and (max-width: 768px) {
+	.text-header h1 {
+		font-size: 1.3rem; /* Adjust font size for smaller screens */
+		/* Add any other styles for smaller screens */
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.text-header h1 {
+		font-size: 1.1rem; /* Adjust font size for smaller screens */
+		/* Add any other styles for smaller screens */
+	}
+}

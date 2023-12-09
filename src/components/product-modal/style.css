@@ -1,0 +1,86 @@
+/* AddProduct.css */
+.add-product-container {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.add-product-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group-trending {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.form-group-trending > * {
+  width: fit-content !important;
+}
+
+.form-group-color-select {
+}
+.product-input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.add-product-button {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+}
+
+.add-product-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.error-message {
+  bottom: 0 !important;
+}
+
+.color-list {
+  margin-block: 1rem;
+}
+
+.color-btn {
+  margin: 0 auto;
+  margin-block: 10px;
+  width: 100%;
+  cursor: pointer;
+  color: var(--primary-color);
+}
+
+.close-add-product-modal {
+  position: fixed;
+  right: 1rem;
+  cursor: pointer;
+  float: right;
+}
+
+.image-item {
+  border: 2px solid var(--primary-color);
+  padding: 3px;
+  width: fit-content;
+  display: flex;
+  align-items: start;
+  margin-block: 5px;
+}
+.image-item .remove-image-button {
+  cursor: pointer;
+  color: red;
+}

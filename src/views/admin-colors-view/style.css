@@ -1,0 +1,140 @@
+/* style.css */
+.admin-colors-view {
+  min-height: 80vh;
+  width: 100%;
+  max-width: 1700px;
+  margin: 0 auto;
+  padding: 1rem;
+  max-height: 100vh;
+  overflow-y: auto;
+}
+.color-list {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.color-item {
+  background-color: #f0f0f0;
+  margin: 5px;
+  width: 100%;
+
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.color-buttons {
+  display: flex;
+  gap: 5px;
+}
+.color-buttons button {
+  cursor: pointer;
+}
+
+.create-color-button {
+  background-color: var(--secondary-color); /* Green background color */
+  color: white; /* White text color */
+  padding: 10px 15px; /* Padding for better appearance */
+  border: none; /* No border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Cursor on hover */
+  margin-block: 1rem;
+}
+
+.create-color-button:hover {
+  background-color: var(--primary-color);
+}
+
+.color-list {
+  list-style: none; /* Remove default list styles */
+  padding: 0; /* Remove default padding */
+}
+
+.color-item {
+  margin-bottom: 10px; /* Add spacing between items */
+}
+
+.color-buttons button {
+  background-color: var(--primary-color); /* Blue background color */
+  color: white; /* White text color */
+  padding: 5px 10px; /* Padding for better appearance */
+  border: none; /* No border */
+  border-radius: 4px;
+  cursor: pointer; /* Cursor on hover */
+  margin-right: 5px;
+}
+
+.color-buttons button:hover {
+  background-color: var(--secondary-color);
+}
+.gluter-container {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 100%;
+  height: fit-content;
+}
+.gluter-container > * {
+  flex: 1;
+  height: 16px;
+}
+.gluter-container input {
+  width: fit-content;
+}
+
+/* Add more styles as needed */
+.modal-color-admin {
+  width: 300px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  margin: 0 auto;
+  z-index: 100;
+}
+
+.modal-color-admin-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-color-admin h2 {
+  margin-bottom: 15px; /* Add spacing below the heading */
+}
+
+.modal-color-admin label {
+  display: block; /* Display labels on a new line */
+  margin-bottom: 5px; /* Add spacing below labels */
+}
+
+.modal-color-admin input {
+  width: 100%; /* Full width input */
+  padding: 8px; /* Padding for input fields */
+  margin-bottom: 10px; /* Add spacing below input fields */
+  border: 1px solid var(--secondary-color);
+  border-radius: 5px;
+}
+
+.modal-color-admin button {
+  background-color: var(--secondary-color); /* Blue background color */
+  color: white; /* White text color */
+  padding: 8px 12px; /* Padding for better appearance */
+  border: none; /* No border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Cursor on hover */
+  margin-right: 5px; /* Add some spacing between buttons */
+}
+
+.modal-color-admin button:hover {
+  background-color: var(--primary-color); /* Darker blue on hover */
+}

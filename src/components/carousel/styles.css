@@ -1,0 +1,63 @@
+.carousel-content {
+	text-align: center;
+	width: 100%;
+	position: relative;
+	margin-bottom: 30px;
+	margin-inline: auto;
+	cursor: pointer;
+	height: fit-content;
+}
+.slick-slide div {
+    outline: none;
+}
+.img {
+	display: flex;
+	margin: 0 auto;
+	aspect-ratio: 1/1;
+	/*width: 80%;*/
+	max-width: 200px;
+	object-fit: contain;
+	border-radius: 5%;
+	border: none;
+	filter: grayscale(100%); /* Apply grayscale to all slides */
+	opacity: 0.4; /* Set the opacity for all slides to half transparent */
+	padding: 0.4rem;
+}
+.carousel-container {
+	margin: 0 auto;
+	width: 100%;
+	height: fit-content;
+	border: none;
+}
+
+/* Apply styles to the active slide */
+
+.img.active {
+	filter: none; /* Normal color for the active slide */
+	opacity: 1; /* Set the opacity for all slides to half transparent */
+	transform: scale(1.2);
+
+	transition: all 0.5s ease-in-out;
+	border: none;
+
+}
+
+/* Apply styles to non-active slides */
+
+img:hover {
+	filter: none;
+	opacity: 1;
+}
+
+@media (max-width: 1024px) {
+	.img {
+		max-width: 80%; /* Adjust the image size for tablets */
+	}
+}
+
+/* Responsive styles for phones */
+@media (max-width: 768px) {
+	.img {
+		max-width: 70%; /* Adjust the image size for phones */
+	}
+}

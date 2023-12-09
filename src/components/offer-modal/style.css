@@ -1,0 +1,89 @@
+/* OfferModal.css */
+.offer-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 8px;
+  outline: none;
+  width: 100%;
+  max-width: 1700px;
+  height: fit-content;
+  padding: 30px 20px;
+  max-height: 90vh;
+  overflow-y: auto;
+  z-index: 1000;
+  display: flex;
+}
+.ReactModal__Overlay--before-close {
+  pointer-events: none;
+}
+.modal-offer-content {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.modal-offer-content-btn {
+  position: absolute;
+  top: 0;
+  right: 1rem;
+  cursor: pointer;
+}
+.modal-offer-content-products {
+  position: absolute;
+  bottom: 2rem;
+  color: var(--primary-color);
+  font-size: 20px;
+  font-weight: 600;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  padding: 5px 30px;
+  outline: 2px solid var(--primary-color);
+  background-color: var(--background-color);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.modal-offer-content-products:hover {
+  background-color: var(--primary-color);
+  outline: 2px solid white;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.modal-offer-content img {
+  border-radius: 5px;
+  width: 100%;
+  max-width: 1000px;
+  max-height: 70vh;
+  animation: slideInDropdown 1s ease-in-out; /* Animation properties */
+}
+
+@keyframes slideInDropdown {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.modal-offer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(18, 18, 18, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}

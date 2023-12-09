@@ -1,0 +1,29 @@
+.cart-product-button {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  line-height: 50px;
+  font-size: 16px;
+  color: #ffffff;
+  text-transform: uppercase;
+  background: var(--primary-color);
+  opacity: 0.8;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 500px;
+  transition: opacity 0.2s ease-in-out;
+  outline: none; /* Remove the outline on button click */
+}
+
+.cart-product-button:hover {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .cart-product-button {
+    font-size: 14px;
+    line-height: 40px;
+    padding: 10px 30px;
+  }
+}

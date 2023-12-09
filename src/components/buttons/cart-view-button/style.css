@@ -1,0 +1,38 @@
+.cart-actions-button{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    width: 100%;
+    line-height: 50px;
+    padding: 0 40px;
+    font-size: 16px;
+    color: #ffffff;
+    text-transform: uppercase;
+    background: #3b3b3b;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    outline: none; /* Remove the outline on button click */
+  }
+
+  .cart-actions-button:hover {
+    background-color: var(--primary-color);
+  }
+  
+  @media (max-width: 768px) {
+.cart-actions-button {
+      font-size: 14px;
+      line-height: 40px;
+      padding: 5px 30px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+.cart-actions-button{
+      line-height: 30px;
+      padding: 10px 40px;
+      font-size: 16px;   
+      width: 100%;
+    }
+  }
+  

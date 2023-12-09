@@ -1,0 +1,77 @@
+/* OfferModal.css */
+
+.offer-modal-container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.offer-image {
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  max-height: 400px;
+  margin-bottom: 10px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.offer-image.editing {
+  opacity: 0.5;
+  border: 2px solid var(--primary-color); /* Example border color, customize as needed */
+}
+
+.image-upload {
+  margin-top: 10px;
+}
+.offer-image-button {
+  background-color: rgb(
+    240,
+    64,
+    64
+  ); /* Example background color, customize as needed */
+  color: #fff;
+  padding: 8px 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.image-upload label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Add any other styles as needed */
+
+.save-button {
+  background-color: var(--primary-color); /* Blue */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.input-file-button {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 8px 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.admin-offer-modal-container {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,160 @@
+/* ProductCard.css */
+
+.new-arrival-card {
+  width: 100%;
+  max-width: 320px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.new-arrival-card:hover .new-arrival-image {
+  transform: scale(1.08);
+}
+.new-arrival-image {
+  width: 100%;
+  max-width: 250px;
+  overflow: hidden;
+  aspect-ratio: 5/4;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all 0.45s ease-in-out;
+  position: relative;
+  /*border: 1px solid #dadada;*/
+  border-radius: 2px;
+  margin: 3px auto;
+}
+.new-arrival-card .new-arrival-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0; /* Initially hidden */
+  transition: all 0.3s ease-in-out;
+  height: 100%;
+  width: 100%;
+  pointer-events: none; /* Allow clicks to pass through the overlay */
+}
+
+/* Reverse the grayscale filter for non-white areas */
+
+.new-arrival-card:hover .new-arrival-image::before {
+  opacity: 1; /* Show the gray overlay on hover */
+  filter: grayscale(0%) invert(10%);
+  transform: scale(1.04);
+}
+
+.new-arrival-info {
+  width: 100%;
+  padding: 0.5rem; /* Adjust padding for large screens */
+  z-index: 10;
+  background-color: var(--secondary-color);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.new-arrival-info .new-arrival-name {
+  color: #ffffff;
+  font: 400 16px "Poppins", sans-serif;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.new-arrival-info .new-arrival-description {
+  font: 400 14px/1.7 "Poppins", sans-serif;
+  max-height: 45px;
+  display: block;
+  text-overflow: ellipsis;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  margin-bottom: 5px;
+  text-align: center;
+
+  color: whitesmoke;
+}
+
+.new-arrival-card.hovered .new-arrival-info .new-arrival-price {
+  color: white;
+  font-weight: 700;
+}
+
+.new-arrival-info .new-arrival-price {
+  margin-bottom: 5px;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1;
+  display: flex;
+  color: rgb(232, 226, 226);
+  font-style: normal;
+  font-family: "Poppins", sans-serif;
+  align-items: center;
+}
+.new-arrival-info .new-arrival-price .discount-price {
+  text-decoration: line-through;
+  padding-right: 5px;
+  color: black;
+}
+
+.new-arrival-button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  height: 45px;
+  line-height: 40px;
+  position: relative;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 0 18px;
+  margin-top: 5px;
+  color: #777;
+  border: 1px solid #c2c2c2;
+  border-radius: 1px;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.new-arrival-button span {
+  padding-inline: 5px;
+  display: flex;
+}
+
+.new-arrival-button:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+@media (max-width: 767px) {
+  /* On small screens, display 2 product cards in a row with smaller width */
+
+  .new-arrival-card {
+    width: 100%; /* Full width for each card */
+    margin-right: 0;
+  }
+
+  .new-arrival-image {
+    background-size: contain;
+  }
+
+  .new-arrival-info {
+    padding: 0.2rem; /* Adjust padding for small screens */
+    /*background-color: rgba(0, 0, 0, 0.05); !* Darker background color *!*/
+  }
+
+  .new-arrival-info .new-arrival-name {
+    font-size: 0.8rem; /* Smaller font size for product name and price */
+    font-weight: bold;
+    margin: 0 auto;
+    color: rgb(255, 255, 255);
+  }
+}

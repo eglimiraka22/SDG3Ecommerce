@@ -1,0 +1,113 @@
+.price-filter {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 400px;
+  height: 100%;
+  min-height: 250px;
+  padding: 0.2rem 1.5rem;
+}
+.price-filter-title {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  font: 500 20px/1.3 "Poppins", sans-serif;
+  height: fit-content;
+  position: relative;
+  cursor: pointer;
+  padding-block: 1rem;
+  margin: 0.6rem auto;
+}
+.btn-filter-container {
+  margin-top: 0.5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.price-filter-title:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 3rem;
+  border-bottom: 3px solid #000000;
+}
+
+.price-filter .price-range {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding-block: 1rem;
+}
+
+.price-filter .price-range > * {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  justify-content: left;
+  padding-inline: 0;
+  color: var(--gray-second-color);
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: sans-serif;
+  width: 100%;
+  float: left;
+  line-height: 35px;
+  font-size: 15px;
+}
+
+.price-filter .price-range > *:first-child {
+  padding-inline: 0;
+  width: fit-content;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  padding-right: 5px;
+  flex-shrink: 0;
+}
+
+.price-filter .price-range > *:last-child {
+  padding-inline: 0;
+  flex-shrink: 1;
+}
+
+.price-filter .filter-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1.6rem;
+  border: 1px solid var(--gray-second-color);
+  border-radius: 2px;
+  cursor: pointer;
+  margin: 0.5rem 0;
+}
+
+.price-filter .filter-button:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: 1px solid var(--primary-color);
+  transition: all 0.3s ease-in-out;
+}
+
+.reset-filter-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1.6rem;
+  border: 1px solid var(--gray-second-color);
+  border-radius: 2px;
+  cursor: pointer;
+  margin: 0 0 0 auto;
+}
+
+.reset-filter-button:hover {
+  background-color: var(--gray-second-color);
+  transition: all 0.3s ease-in-out;
+  color: var(--white);
+}

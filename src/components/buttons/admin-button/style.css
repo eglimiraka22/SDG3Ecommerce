@@ -1,0 +1,43 @@
+.admin-button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    height: 45px;
+    line-height: 40px;
+    position: relative;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 0 18px;
+    margin-top: 5px;
+    color: #777;
+    border: 1px solid #c2c2c2;
+    border-radius: 1px;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  .admin-button span {
+    padding-inline: 5px;
+    display: flex;
+  }
+  
+  .admin-button:hover {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  @media (max-width: 768px) {
+    /* On small screens, display 2 admin cards in a row with smaller width */
+  
+    .admin-button {
+      line-height: 15px;
+      padding: 0 2px;
+    }
+    .admin-button span {
+      padding-inline: 0px;
+      display: flex;
+    }
+  }
+  

@@ -1,0 +1,231 @@
+.shamir-header {
+  height: 60vh;
+  background-image: url("https://shamir.com/wp-content/uploads/2021/09/Shamir-Front-of-Building-1-1024x730.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shamir-header p {
+  color: white;
+  font-size: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.shamir-header::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(https://optikaluani.al/wp-content/uploads/2020/11/isp-10.png);
+}
+
+.shamir-header::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: var(--primary-color);
+  opacity: 0.9;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s ease;
+}
+.shamir-main-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+
+.shamir-section-one {
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  margin-bottom: 140px;
+}
+
+.shamir-section-one-text {
+  flex-basis: 40%;
+  justify-content: center;
+  margin-left: 10px;
+  padding-inline: 20px;
+  position: relative;
+}
+
+.shamir-section-one-text::after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "";
+  background-image: url("https://optikaluani.al/wp-content/uploads/2020/11/isp-03.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right 0px bottom 0px;
+  z-index: -1;
+}
+
+.shamir-section-one .shamir-section-one-text h1 {
+  font-family: "Poppins", Helvetica, Arial, Lucida, sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 26px;
+  line-height: 1.5em;
+  text-align: center;
+}
+
+.shamir-section-one .shamir-section-one-text p {
+  font-family: "Quicksand", Helvetica, Arial, Lucida, sans-serif;
+  color: #666666;
+  font-size: 16px;
+  line-height: 2em;
+  text-align: left;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  padding-inline: 5px;
+  overflow-wrap: break-word; /* Allow long words to be broken and wrap onto the next line */
+  word-wrap: break-word; /* For older browsers that don't support overflow-wrap */
+}
+
+.shamir-section-one:nth-child(1) .shamir-section-one-image {
+  padding-right: 40px !important;
+  padding-bottom: 50px !important;
+  padding-left: 40px !important;
+}
+
+.shamir-section-one:nth-child(2) .shamir-section-one-image {
+  width: 70%;
+  box-shadow: unset;
+  margin: 0 auto;
+}
+.shamir-section-one:nth-child(2) .shamir-section-one-image img {
+  width: 90%;
+  border-radius: 5px;
+}
+
+.shamir-section-one:nth-child(2) .shamir-section-one-text p {
+  width: 90%;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  margin: 2rem auto;
+}
+.shamir-section-one-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 15px 15px 15px 15px;
+  overflow: hidden;
+  border-width: 0px;
+  box-shadow: 0px 40px 80px -20px rgba(0, 46, 117, 0.12);
+  width: 100%;
+}
+.shamir-section-one-image img {
+  width: 100%;
+}
+
+.shamir-section-one-image .shamir-section-one-image-title {
+  font-family: "Poppins", Helvetica, Arial, Lucida, sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 30px;
+  line-height: 1.5em;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 2rem;
+}
+@media (width >=425px) {
+  .shamir-header p {
+    font-size: 3rem;
+  }
+}
+@media (width>=768px) {
+  .shamir-header p {
+    font-size: 5.5rem;
+  }
+}
+
+@media (width>=1024px) {
+  .shamir-section-one {
+    flex-direction: row;
+  }
+  .shamir-section-one:last-child {
+    flex-direction: row-reverse;
+    margin-top: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .shamir-section-one-text {
+    flex-basis: 40%;
+    justify-content: center;
+    margin-left: 10px;
+    padding-inline: 20px;
+  }
+
+  .shamir-section-one .shamir-section-one-text h1 {
+    text-align: center;
+  }
+
+  .shamir-section-one-image {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+
+    max-width: 500px;
+  }
+  .shamir-section-one-image img {
+    width: 100%;
+    height: 430px;
+  }
+
+  .shamir-section-one-image .shamir-section-one-image-title {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 2rem;
+  }
+
+  .shamir-section-one:nth-child(2) .shamir-section-one-image {
+    width: 70%;
+    box-shadow: unset;
+    margin: 0;
+  }
+  .shamir-section-one:nth-child(2) .shamir-section-one-image img {
+    width: 90%;
+    border-radius: 5px;
+  }
+
+  .shamir-section-one:nth-child(2) .shamir-section-one-text p {
+    width: 90%;
+    border-radius: 5px;
+    padding-block: 0;
+    margin: 0 auto;
+    text-align: left;
+  }
+}

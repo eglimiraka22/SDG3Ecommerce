@@ -1,0 +1,155 @@
+.order-container {
+  min-height: 50vh;
+  width: 100%;
+}
+/* style.css */
+.order-table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.order-table caption {
+  font-size: 1.5em;
+  margin: 0.5em 0 0.75em;
+}
+.order-table tr {
+  background-color: #fff;
+  border: 1px solid #e1e5e9;
+  padding: 0.35em;
+  border-radius: 3px;
+}
+
+.order-table th,
+.order-table td {
+  padding: 1.625em;
+  text-align: center;
+  color: #9da9b9;
+  font-size: 16px;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+
+.order-table th {
+  font-size: 0.85em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.order-table thead tr th label {
+  color: white;
+}
+
+.order-table tbody tr td .btn-invoice {
+  background: #3e90d8;
+  color: #fff;
+  font-size: 13px;
+  padding: 7px 20px;
+  outline: 1px solid var(--gray-color);
+  border-radius: 2px;
+  border: 0;
+  font-family: cursive;
+  cursor: pointer;
+}
+.order-table tbody tr td .btn-invoice:hover {
+  background: #0f82e6;
+  outline: 2px solid var(--gray-color);
+}
+
+.order-table tbody tr:nth-child(even) {
+  background-color: #eee;
+}
+
+.order-table tbody tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+.order-table tbody tr:hover {
+  outline: 1px solid var(--gray-second-color);
+}
+.order-table tbody tr td:nth-child(1):hover,
+.order-table tbody tr td:nth-child(2):hover {
+  color: red;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+.order-container {
+  text-align: center;
+}
+
+.filter-buttons {
+  margin: 20px 0;
+}
+
+.filter-buttons button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.filter-buttons button:hover {
+  background-color: #2980b9;
+}
+
+.pagination-container-orders {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .order-table {
+    border: 0;
+  }
+  .order-table caption {
+    font-size: 1.3em;
+  }
+  .order-table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+    padding: 0;
+  }
+  .order-table tr {
+    border-bottom: 3px solid #e1e5e9;
+    display: block;
+    margin-bottom: 0.625em;
+  }
+  .order-table th,
+  .order-table td {
+    padding: 0.625em;
+  }
+  .order-table td {
+    border-bottom: 1px solid #e1e5e9;
+    display: block;
+    font-size: 0.8em;
+    text-align: right;
+    color: #9da9b9;
+  }
+  .order-table td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 0, 9em;
+    color: #656971;
+  }
+  table td:last-child {
+    border-bottom: 0;
+  }
+}

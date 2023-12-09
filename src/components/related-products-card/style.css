@@ -1,0 +1,186 @@
+/* ProductCard.css */
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,700,900");
+
+.related-card {
+  width: 100%;
+  max-width: 278px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  outline: 2px solid var(--background-color);
+}
+
+.related-image {
+  cursor: pointer;
+
+  width: 100%;
+  overflow: hidden;
+  aspect-ratio: 1/1;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all 0.4s ease-in-out;
+  border-radius: 2px;
+  border-bottom: 1px solid #e9e9e9;
+
+  vertical-align: middle;
+  position: relative;
+}
+
+/* relatedCard.css */
+
+/* Apply a grayscale filter to the entire image */
+.related-card .related-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.15); /* Gray overlay color */
+  filter: grayscale(0%) invert(10%);
+  border: 1px solid var(--secondary--color);
+
+  opacity: 0; /* Initially hidden */
+  transition: all 0.5s ease-in-out;
+  pointer-events: none; /* Allow clicks to pass through the overlay */
+}
+
+.related-card.hovered .related-image::before {
+  opacity: 0.8; /* Show the gray overlay on hover */
+}
+
+.related-info {
+  width: 100%;
+  padding: 0.5rem; /* Adjust padding for large screens */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.related-info .related-brand {
+  color: #959595;
+  font: 400 14px "Poppins", sans-serif;
+}
+
+.related-info .related-name {
+  margin: 0 auto;
+  font: 400 14px/1.7 "Poppins", sans-serif;
+  height: fit-content;
+  display: block;
+  text-overflow: ellipsis;
+  margin: 12px 0 10px;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  text-align: center;
+
+  color: #222;
+}
+
+.related-card.hovered .related-info .related-price {
+  color: var(--primary-color); /* Change the price color on hover */
+}
+
+.related-info .related-price {
+  margin-bottom: 16px;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1;
+  display: flex;
+  margin: 0 auto;
+  color: #2449a4;
+  font-style: normal;
+  font-family: "Poppins", sans-serif;
+  align-items: center;
+}
+.related-info .related-price .old-price {
+  text-decoration: line-through;
+  padding-right: 5px;
+  color: var(--gray-color);
+}
+
+.related-button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  height: 45px;
+  line-height: 40px;
+  position: relative;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 0 18px;
+  margin-top: 5px;
+  color: #777;
+  border: 1px solid #c2c2c2;
+  border-radius: 1px;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.related-button span {
+  padding-inline: 5px;
+  display: flex;
+}
+
+.related-button:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+@media (max-width: 768px) {
+  /* On small screens, display 2 related cards in a row with smaller width */
+
+  .related-card {
+    width: 100%; /* Full width for each card */
+    max-width: 100%;
+
+    margin-right: 0;
+  }
+
+  .related-image {
+    background-size: contain;
+    aspect-ratio: 1/1;
+  }
+  .related-button {
+    line-height: 15px;
+    padding: 0 2px;
+  }
+  .related-button span {
+    padding-inline: 0px;
+    display: flex;
+  }
+}
+
+@media (max-width: 425px) {
+  .related-info {
+    width: 100%;
+    padding-inline: 0; /* Adjust padding for large screens */
+  }
+  .related-info .related-price {
+    margin-bottom: 16px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1;
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    color: #2449a4;
+    font-style: normal;
+    font-family: "Poppins", sans-serif;
+    align-items: center;
+  }
+  .related-info .related-price .old-price {
+    text-decoration: line-through;
+    padding-right: 2px;
+    color: var(--gray-color);
+  }
+
+  .related-info .related-name {
+    margin: 5px 0 10px;
+  }
+}

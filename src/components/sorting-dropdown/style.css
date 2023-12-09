@@ -1,0 +1,44 @@
+
+.sort-container{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-inline: 1.7rem;
+    padding-block: 0.8rem;
+    width: 100%;
+}
+
+.sort-container p{
+    font-size: 1.2rem;
+    padding-inline: 5px;
+
+}
+
+.sort-container .select-container{
+    flex: 1;
+    max-width:300px;
+    width: 100%;
+}
+
+@media (width<=1024px) {
+    .sort-container{
+        justify-content: center;
+        padding-inline: 0.2rem;
+
+
+    }
+    .sort-container p{
+        font-size: 1.2rem;
+        padding-inline: 5px;
+    
+    }
+    .sort-container .select-container{
+        flex: 1;
+        max-width:600px;
+    }
+
+}
+
+@media (width <=425px){
+  
+}

@@ -1,0 +1,38 @@
+.currency-dropdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin-block: 20px;
+  padding-right: 1rem;
+  float: left;
+}
+
+.currency-dropdown select {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid var(--primary-color);
+  font-size: 16px;
+}
+
+/* Style the icons */
+.currency-dropdown option {
+  margin-right: 5px;
+  border: 2px solid;
+  width: 20px;
+  height: 20px;
+  color: var(--primary-color);
+}
+
+@media screen and (max-width: 768px) {
+  .currency-dropdown {
+    padding-right: 0;
+  }
+  .currency-dropdown select {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid var(--primary-color);
+    font-size: 16px;
+    width: 50px;
+  }
+}

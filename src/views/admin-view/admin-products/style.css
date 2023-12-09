@@ -1,0 +1,71 @@
+.admin-products {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  justify-content: center;
+  padding: 1rem;
+
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-products-container {
+  width: 100%;
+  margin: 2rem auto;
+  padding: 1rem;
+  height: 100%;
+  max-height: 100vh;
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 0fr));
+  gap: 20px;
+  padding: 20px;
+  align-items: flex-start;
+  justify-self: center;
+  justify-content: center;
+  align-self: flex-start;
+}
+
+.admin-products-container::-webkit-scrollbar {
+  width: 6px; /* Set the width of the scrollbar */
+}
+
+.admin-products-container::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color); /* Color of the thumb */
+  border-radius: 1px; /* Rounded thumb */
+}
+
+.admin-products-container::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Hover color of the thumb */
+}
+
+.admin-products-container > * {
+  justify-self: center;
+}
+
+.filter-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: 1px solid var(--gray-color);
+  padding: 6px;
+  border-radius: 5px;
+}
+.filter-input {
+  border: unset; /* Add your default border style here */
+  transition: border 0.3s; /* Add a smooth transition for better user experience */
+  margin: 0 !important;
+}
+
+.filter-input:focus,
+.filter-input::selection {
+  outline: none; /* Remove the default focus outline */
+  border-color: unset; /* Set border color to transparent when focused or selected */
+}
+
+@media screen and (max-width: 600px) {
+  .admin-products-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

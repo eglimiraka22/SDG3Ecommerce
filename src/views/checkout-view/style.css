@@ -1,0 +1,402 @@
+.checkout-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  display: flex;
+  justify-content: space-between;
+  height: fit-content;
+  user-select: none;
+}
+
+.checkout-billing {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  flex-grow: 1;
+  flex-basis: 65%;
+}
+
+.checkout-billing > * {
+  position: relative;
+}
+.checkout-orders-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  flex-grow: 1;
+  flex-basis: 35%;
+}
+.checkout-order {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  flex-grow: 1;
+  width: 100%;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+  padding: 30px 10px;
+  user-select: none;
+}
+input:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+.checkout-container input[type="text"],
+.checkout-container textarea {
+  width: 100%;
+  padding: 10px;
+  transition: border-color 0.3s ease-in-out;
+  display: block;
+  width: 100%;
+  height: 40px;
+  font-size: 16px;
+  color: #1a1a1a;
+  border-bottom: 2px solid #e5e5e5;
+  margin-bottom: 35px;
+  margin-top: 25px;
+  writing-mode: horizontal-tb !important;
+  /* font-family: 'Lato', sans-serif; */
+  color: #57667e;
+  position: relative;
+}
+
+.checkout-container textarea {
+  height: 120px;
+
+  border: 1px solid #e5e5e5;
+}
+
+/* Style for the input fields on focus */
+.checkout-container input[type="text"]:focus,
+.checkout-container textarea:focus {
+  border-color: black; /* Black border on focus */
+  outline: none; /* Remove the outline */
+  transition: border-color 0.3s ease-in-out;
+}
+
+textarea {
+  resize: none;
+  /* Other CSS styles for your textarea */
+}
+
+.error input[type="text"],
+.error textarea {
+  border-color: red;
+}
+/* Style for placeholder text */
+.checkout-container input[type="text"]::placeholder,
+.checkout-container textarea::placeholder {
+  font-style: normal; /* Make it italic */
+  color: #0c0c0c; /* Add a subtle gray color */
+}
+
+.checkout-billing-title,
+.checkout-orders-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 28px;
+  color: #1d1d1d;
+  padding-bottom: 55px;
+}
+
+.checkout-orders-fatura {
+  /* font-family: 'Lato', sans-serif; */
+  font-weight: 600;
+  font-size: 26px;
+  color: #1d1d1d;
+  padding-bottom: 15px;
+}
+.checkout-name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  position: relative;
+}
+.checkout-name > * {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.checkout-contact > * {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.checkout-contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+.error-message {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  font-size: 15px;
+  line-height: 20px;
+  color: #fffefe;
+  background-color: var(--primary-color);
+  padding: 0 15px;
+  border-radius: 3px;
+  box-shadow: 0px 10px 25px 0px rgba(123, 147, 171, 0.15);
+}
+.checkout-orders-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  padding-block: 1rem;
+}
+.checkout-orders-details-products {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+.checkout-orders-details-total {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 1rem;
+  border-top: 2px solid #e5e5e5;
+  text-align: center;
+  font-size: 22px;
+  color: #222222;
+  /* font-family: 'Poppins', sans-serif; */
+  font-weight: 600;
+}
+
+.checkout-orders-details-total p:first-child {
+  flex: 1;
+}
+.checkout-orders-details-total p:last-child {
+  text-align: center;
+  flex: 1;
+}
+.checkout-orders-details-product {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  font-size: 17px;
+  color: #242424;
+  text-indent: initial;
+  border-spacing: 2px;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0.6rem 0;
+}
+
+.checkout-orders-details-product-name {
+  flex: 1;
+  font-size: 18px;
+  color: #242424;
+  text-indent: initial;
+  border-spacing: 3px;
+  word-spacing: 2px;
+  font-weight: 500;
+  /* font-family:  sans-serif; */
+  flex-basis: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3px;
+}
+.checkout-orders-details-product-name > * {
+  margin-top: 3px;
+}
+.checkout-orders-details-product-name p {
+  flex-wrap: wrap;
+  font-size: 16px;
+}
+.cart-products-product-info-color {
+  min-height: 20px;
+  min-width: 20px;
+}
+.checkout-orders-details-product-price {
+  flex: 1;
+  display: flex;
+  flex-direction: column-reverse;
+  text-align: left;
+  font-size: 19px;
+  color: #242424;
+  text-indent: initial;
+  border-spacing: 2px;
+  font-weight: bold;
+  /* font-family: 'Lato', sans-serif; */
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  flex-basis: 50%;
+  position: relative;
+}
+.checkout-orders-details-product-price p {
+  flex: 1;
+}
+.checkout-orders-details-product-quantity {
+  text-align: center;
+  font-size: 12px;
+  color: #afafaf;
+  text-indent: initial;
+  font-weight: bold;
+  /* font-family: 'Lato', sans-serif; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.checkout-orders-payment {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  padding-block: 1rem;
+  text-align: right;
+  font-size: 20px;
+  color: #222222;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  border-bottom: 2px solid #e5e5e5;
+}
+.checkout-orders-payment-title {
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+}
+
+.payment-methods {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.payment-method {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Add this CSS to your stylesheet or a CSS module */
+
+.circle {
+  width: 25px;
+  height: 25px;
+  border: 2px solid #373737; /* Default empty circle border */
+  border-radius: 50%;
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.selected .circle {
+  background-color: #373737; /* Background color for selected circle */
+  border: none;
+}
+
+.selected .circle span {
+  color: #fff; /* Tick color for selected circle */
+}
+
+.payment-method span {
+  font-size: 16px;
+}
+
+.payment-method.selected .payment-method-circle:after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 5px;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.checkout-data-protection-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: left;
+  font-size: 15px;
+  line-height: 22px;
+  color: #979797;
+  padding: 25px 0 20px;
+  margin: 1em 0;
+  display: block;
+}
+
+.checkout-orders-submit {
+  display: flex;
+  justify-content: center;
+}
+/* Responsive font size for placeholder text */
+@media (max-width: 1024px) {
+  .checkout-container {
+    height: fit-content;
+    flex-direction: column;
+  }
+
+  .checkout-container input[type="text"]::placeholder,
+  .checkout-container textarea::placeholder {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+  .checkout-orders-details-total p:first-child {
+    justify-content: center;
+  }
+  .checkout-orders-details-total p:last-child {
+    text-align: center;
+  }
+  .checkout-orders-details-product-price {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .checkout-order {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    flex-grow: 1;
+    width: 100%;
+    border: none;
+    padding: 0;
+    user-select: none;
+  }
+  .checkout-name {
+    flex-direction: column;
+    gap: 0rem;
+  }
+  .checkout-contact {
+    flex-direction: column;
+    gap: 0rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .checkout-orders-details-product-name {
+    font-size: 16px;
+  }
+  .checkout-orders-details-product-price {
+    text-align: left;
+    font-size: 17px;
+  }
+}

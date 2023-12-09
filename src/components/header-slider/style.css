@@ -1,0 +1,129 @@
+.containerSlider {
+  position: relative; /* Add this line to make the positioning of absolute elements relative to this container */
+  margin: auto;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.slide-container {
+  position: relative; /* Add this line to establish a stacking context */
+}
+
+.containerSlider img {
+  width: 100%;
+  height: 73vh;
+  text-align: center;
+  align-content: center;
+  object-fit: cover;
+}
+
+.containerSlider::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0) 50%,
+    rgba(255, 255, 255, 0.6) 75%,
+    rgba(255, 255, 255, 0.9) 85%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+.slide-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white; /* Change the text color to white or another suitable color */
+  text-align: center;
+  width: 100%;
+  z-index: 100;
+  text-shadow: 2px 1px 1px rgba(0, 0, 0, 0.5);
+
+  /* Add text shadow to enhance visibility */
+}
+
+.slide-content h2 {
+  font-size: 3.5em;
+  margin-bottom: 10px;
+}
+
+.slide-content p {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.shop-now-button {
+  background-color: #555; /* Change the background color of the button */
+  color: #fff; /* Change the text color of the button */
+  padding: 10px 40px;
+  font-size: 1.2em;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.shop-now-button:hover {
+  background-color: #333; /* Change the background color on hover */
+}
+
+@media (max-width: 732px) {
+  .containerSlider img {
+    height: 15em;
+  }
+}
+
+@media (max-width: 500px) {
+  .containerSlider img {
+    height: 20em;
+  }
+  .slide-content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Change the text color to white or another suitable color */
+    text-align: center;
+    width: 100%;
+    z-index: 100;
+    text-shadow: 2px 1px 1px rgba(0, 0, 0, 0.5);
+
+    /* Add text shadow to enhance visibility */
+  }
+
+  .slide-content h2 {
+    font-size: 1.5em;
+    margin-block: 10px;
+  }
+
+  .slide-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+  }
+
+  .shop-now-button {
+    background-color: #555; /* Change the background color of the button */
+    color: #fff; /* Change the text color of the button */
+    padding: 8px 20px;
+    font-size: 1.2em;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+}

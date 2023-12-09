@@ -1,0 +1,83 @@
+.order-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    height: 100%;
+    max-height: 80vh;
+    overflow: auto;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .order-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(212, 210, 210, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+  }
+
+  /* Add this CSS to your stylesheet */
+
+  
+  
+.order-modal h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333; /* Title color */
+  }
+  
+  .order-modal .order-details {
+    font-size: 18px;
+    margin-bottom: 10px;
+    padding: 5px;
+    border-bottom: 1px solid var(--gray-color);
+  }
+  
+  .order-items-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .order-items-list li {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .order-items-list p {
+    font-size: 18px;
+    margin: 0;
+  }
+  
+  .order-details-title {
+    color: var(--primary-color); /* Title color for order details */
+    font-weight: bold; /* Title font weight for order details */
+  }
+  
+  .order-details-data {
+    color: #585858; /* Data color for order details */
+    font-weight: 600; /* Title font weight for order details */
+
+  }
+  
+  .order-modal-overlay {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
