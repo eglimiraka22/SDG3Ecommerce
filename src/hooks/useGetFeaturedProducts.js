@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { readOnlyClient } from "../client"; // Import your Sanity client
+import { client } from "../client"; // Import your Sanity client
 
 const useGetFeaturedProducts = () => {
   const [loading, setLoading] = useState(true);
@@ -24,7 +24,7 @@ const useGetFeaturedProducts = () => {
         }[0...4]`;
 
         // Execute the query
-        const result = await readOnlyClient.fetch(sanityQuery);
+        const result = await client.fetch(sanityQuery);
 
         setProducts(result);
         setLoading(false);

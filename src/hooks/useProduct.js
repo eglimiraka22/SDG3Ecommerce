@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { readOnlyClient } from "../client"; // Import your Sanity client
+import { client } from "../client"; // Import your Sanity client
 
 const useProduct = (productId) => {
   const [product, setProduct] = useState(null);
@@ -40,7 +40,7 @@ const useProduct = (productId) => {
         }`;
 
         // Execute the query with the provided productId
-        const result = await readOnlyClient.fetch(sanityQuery, { productId });
+        const result = await client.fetch(sanityQuery, { productId });
 
         if (result.length === 1) {
           // Set the product data if it exists

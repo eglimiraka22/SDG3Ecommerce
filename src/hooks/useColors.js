@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { readOnlyClient } from "../client"; // Assuming you've exported your Sanity client
+import { client } from "../client"; // Assuming you've exported your Sanity client
 
 const useColors = () => {
   const [colors, setColors] = useState([]);
@@ -8,7 +8,7 @@ const useColors = () => {
   useEffect(() => {
     const fetchColors = async () => {
       try {
-        const result = await readOnlyClient.fetch(
+        const result = await client.fetch(
             '*[_type == "color"] | order(_createdAt asc) { _id, code, hasGlutters, }',
             );
         setColors(result);

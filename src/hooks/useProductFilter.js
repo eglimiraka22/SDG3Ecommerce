@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { readOnlyClient } from "../client";
+import { client } from "../client";
 
 const useProductFiltering = (page, pageSize) => {
   const [filteredProducts, setFilteredProducts] = useState([]);
@@ -49,7 +49,7 @@ const useProductFiltering = (page, pageSize) => {
 
       // Get the total count of products
       const totalCountQuery = `count(${sanityQuery})`;
-      const totalProductCount = await readOnlyClient.fetch(totalCountQuery);
+      const totalProductCount = await client.fetch(totalCountQuery);
 
       setTotalProductCount(totalProductCount);
       if (sortOption) {
@@ -82,7 +82,7 @@ const useProductFiltering = (page, pageSize) => {
         }
       }`;
 
-      const result = await readOnlyClient.fetch(sanityQuery);
+      const result = await client.fetch(sanityQuery);
 
       setFilteredProducts(result);
 
