@@ -1,4 +1,4 @@
-.admin-button {
+.related-button {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -18,41 +18,30 @@
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
-.admin-button span {
+.related-button span {
   padding-inline: 5px;
   display: flex;
 }
 
-.admin-button:hover {
+.related-button:hover {
   background-color: var(--primary-color);
   color: white;
-}
-
-
-
-.order-details-buttons{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  max-width: 500px;
-  margin: 0 auto;
-  gap: 1rem;
 }
 @media (max-width: 768px) {
   /* On small screens, display 2 admin cards in a row with smaller width */
 
-  .admin-button {
+  .related-button:hover {
+    background-color: white;
+    color: #777;
+  }
+
+  
+  .related-button {
     line-height: 15px;
     padding: 0 2px;
   }
-  .admin-button span {
+  .related-button span {
     padding-inline: 0px;
     display: flex;
-  }
-  .admin-button:hover {
-    background-color: rgb(255, 0, 0);
-    color: #777;
   }
 }
