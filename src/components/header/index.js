@@ -1,4 +1,4 @@
-import { useContext, useRef, useState } from "react";
+import { useCallback, useContext, useRef, useState } from "react";
 import { useEffect } from "react";
 import "./styles.css";
 import { RiShoppingCartFill } from "react-icons/ri";
@@ -58,32 +58,37 @@ function Navbar() {
   const closeDropdown = () => {
     setIsShportaDropdown(false);
   };
-  let scrollTimeout;
+  const isNavStickyRef = useRef(isNavSticky);
+  isNavStickyRef.current = isNavSticky;
 
-  const handleScroll = () => {
-    clearTimeout(scrollTimeout);
-  
-    scrollTimeout = setTimeout(() => {
+  const scrollTimeoutRef = useRef(null);
+
+  const handleScroll = useCallback(() => {
+    clearTimeout(scrollTimeoutRef.current);
+
+    scrollTimeoutRef.current = setTimeout(() => {
       const currentScrollY = window.scrollY;
-  
+
       // Hide the navbar when scrolling down
       if (window.scrollY > 60) {
         setIsNavSticky(true);
       } else {
         setIsNavSticky(false);
       }
-  
+
       // Reveal the navbar when scrolling all the way up
       setPrevScrollY(currentScrollY);
-    }, 100); // Adjust the debounce delay as needed
-  };
-  
+    }, !isNavStickyRef.current ? 0 : 100);
+  }, [isNavStickyRef]);
+
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      clearTimeout(scrollTimeoutRef.current);
     };
-  }, []);
+  }, [handleScroll]);
   
 
   useEffect(() => {
