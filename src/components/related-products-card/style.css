@@ -140,6 +140,10 @@
 
     margin-right: 0;
   }
+  .related-button:hover {
+    background-color: white;
+    color: #777;
+  }
 
   .related-image {
     background-size: contain;

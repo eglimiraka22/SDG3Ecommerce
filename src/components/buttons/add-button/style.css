@@ -51,4 +51,8 @@
     padding-inline: 0px;
     display: flex;
   }
+  .admin-button:hover {
+    background-color: rgb(255, 0, 0);
+    color: #777;
+  }
 }
